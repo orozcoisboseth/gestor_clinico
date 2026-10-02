@@ -126,12 +126,6 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onExploreDemo }) 
     }
   };
 
-  const loadDemoCredentials = () => {
-    setEmail('doctora.elena@consultorio.com');
-    setPassword('terapeuta123');
-    setError(null);
-  };
-
   return (
     <div className="min-h-screen w-full bg-slate-900 text-slate-100 flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
       {/* Top Header */}
@@ -294,28 +288,6 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onExploreDemo }) 
                   <span>{loading ? 'Verificando usuario...' : 'Entrar al Consultorio'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
-
-                {/* 1-Click Demo Shortcut */}
-                <div className="pt-3 border-t border-slate-100">
-                  <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1.5">
-                    <div className="flex items-center justify-between text-[11px] text-slate-600">
-                      <span className="font-semibold flex items-center gap-1">
-                        <Users2 className="w-3.5 h-3.5 text-emerald-600" />
-                        Cuenta Demo de Usuario:
-                      </span>
-                      <span className="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-medium">
-                        2 terapeutas vinculados
-                      </span>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={loadDemoCredentials}
-                      className="w-full py-1.5 px-3 text-[11px] text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer font-mono"
-                    >
-                      <span>Cargar credenciales (Dra. Elena Vasquez)</span>
-                    </button>
-                  </div>
-                </div>
               </form>
             )}
 
